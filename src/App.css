@@ -1,3 +1,9 @@
+.total-header{
+  background-color:rgb(249, 248, 248);
+  padding-bottom: 30px;
+  border-bottom: 1px #d4d2d2 solid;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -18,6 +24,13 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+}
+
+.logo img {
+  margin-left: 20px;
+  height: 50px;
+  scale: 1.5;
+  cursor: pointer;
 }
 
 .home {
@@ -41,31 +54,13 @@
   cursor: pointer;
 }
 
-.nestedServices img {
-  width: 40px;
-  /* or 50px, depending on your design */
-  height: 40px;
-  /* keep aspect ratio consistent */
-  object-fit: contain;
-  /* ensures image scales without distortion */
-  margin-left: 5px;
-  padding: 0;
-  position: absolute;
-  margin-top: -30px;
-}
-
-.nestedServices div{
-  margin-left: 15px;
-  color: rgb(138, 134, 134);
-  font-size: 1.2em;
-}
-
-
-.logo img {
-  margin-left: 20px;
-  height: 50px;
-  scale: 1.5;
+.home {
   cursor: pointer;
+}
+
+.home div {
+  font-weight: 600;
+  color: black;
 }
 
 .home img {
@@ -73,6 +68,10 @@
 }
 
 .experiences img {
+  height: 40px;
+}
+
+.services img {
   height: 40px;
 }
 
@@ -87,19 +86,21 @@
   
 }
 
-.services img {
+.nestedServices img {
+  width: 40px;
   height: 40px;
+  object-fit: contain;
+  margin-left: 5px;
+  padding: 0;
+  position: absolute;
+  margin-top: -30px;
 }
 
-.home div {
-  font-weight: 600;
-  color: black;
+.nestedServices div{
+  margin-left: 15px;
+  color: rgb(138, 134, 134);
+  font-size: 1.2em;
 }
-
-.home {
-  cursor: pointer;
-}
-
 
 .last-part div button{
   border: none;
@@ -107,7 +108,7 @@
   font-weight: bold;
   border-radius: 50px;
   color: rgb(80, 79, 79);
-  background-color: white;
+  background-color: rgb(249, 248, 248);
   cursor: pointer;
 }
 
@@ -133,5 +134,105 @@
 
 
 .last-part div i{
+  font-size: larger;
+}
+
+
+/**Search**/
+.search-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 50px ;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  background-color: white;
+}
+
+
+
+/* Vertical separator line between items */
+.search-div > div:not(:last-child) {
+  padding: 10px 30px 10px 30px;
+  
+}
+
+.search-div > div:not(:first-child) {
+  border-left: 1px solid #b7b7b7;
+}
+
+/* On hover: remove own left border */
+.search-div > div:hover {
+  background-color: #f1f1f1;
+  border-left: none;
+  border-radius: 30px;
+}
+
+/* Also remove the right neighbor's left border */
+.search-div > div:hover + div {
+  border-left: none;
+}
+
+
+.where-div{
+  flex: 0.7;
+  cursor: pointer;
+  
+}
+
+.search-div > div:hover {
+  background-color: #f1f1f1; /* or any light color you prefer */
+  cursor: pointer; /* optional: show pointer on hover */
+  transition: background-color 0.3s ease; /* smooth transition */
+}
+
+.checkin-div{
+  flex: 0.3;
+  cursor: pointer;
+}
+
+.checkout-div{
+  flex: 0.3;
+  cursor: pointer;
+}
+
+.who-div{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  flex: 0.5;
+  padding: 10px 20px;
+}
+
+.search-div div h6{
+  font-weight: 550;
+  font-size: 0.8em;
+  margin: 0;
+}
+
+.search-div div p{
+  color: rgb(101, 101, 101);
+  font-size: 0.9em;
+  margin: 3px 0;
+}
+
+.search-icon{
+  background-color: rgb(239, 66, 66);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+  height: 23px;
+  width: 23px;
+}
+
+.search-icon i{
+  color: white;
+  font-weight: bold;
   font-size: larger;
 }
