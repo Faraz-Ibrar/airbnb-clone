@@ -8,6 +8,9 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import list from './list'
 import { useRef } from 'react';
 
+// Make sure process.env.PUBLIC_URL is used for any static paths that aren't imported
+const PUBLIC_URL = process.env.PUBLIC_URL || '';
+
 function App() {
   // Get unique cities
   const uniqueCities = [...new Set(list.map(item => item.city))];
